@@ -18,12 +18,9 @@
     //-->
 </script>
 <style type="text/css">
-    < !-- @import url("https://fonts.googleapis.com/css?family=Alex+Brush");
-    @import url("https://fonts.googleapis.com/css?family=Farro");
-    @import url("https://fonts.googleapis.com/css?family=Lato");
-    @import url("https://fonts.googleapis.com/css?family=Roboto");
-    @import url("https://fonts.googleapis.com/css?family=Rubik");
-    @import url("https://fonts.googleapis.com/css?family=Asul");
+    < !-- @import url("https://fonts.googleapis.com/css?family=Farro");
+    @import url("https://fonts.googleapis.com/css?family=Lobster");
+    @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
     //-->
 </style>
@@ -166,36 +163,6 @@
         overflow: hidden;
     }
 
-    .ddr-widget__image {
-        position: relative;
-        max-width: 100%;
-        height: auto;
-        margin: auto;
-        display: flex;
-    }
-
-    .ddr-widget__image a,
-    .ddr-widget__image img {
-        overflow: hidden;
-        width: 100%;
-        max-width: 100%;
-        max-height: 100%;
-    }
-
-    .ddr-widget__image a,
-    .ddr-widget__image a:active,
-    .ddr-widget__image a:focus,
-    .ddr-widget__image a:hover,
-    .ddr-widget__image a:link,
-    .ddr-widget__image a:visited {
-        display: inline-block;
-        vertical-align: middle;
-        color: inherit;
-        text-decoration: none;
-        border: none;
-        box-shadow: none;
-    }
-
     .ddr-widget__headline {
         position: relative;
         overflow: hidden;
@@ -207,77 +174,81 @@
         overflow: hidden;
     }
 
-    .ddr-widget__html {
+    .ddr-widget__slideshow {
         position: relative;
         overflow: hidden;
+        height: 300px;
     }
 
-    .ddr-widget__button {
-        position: relative;
+    .ddr-widget__slideshow .slick-list,
+    .ddr-widget__slideshow .slick-slide.slide-wrapper,
+    .ddr-widget__slideshow .slick-slider,
+    .ddr-widget__slideshow .slick-track,
+    .ddr-widget__slideshow .slide,
+    .ddr-widget__slideshow .slide-wrapper,
+    .ddr-widget__slideshow img {
+        height: 100%;
+    }
+
+    .ddr-widget__slideshow .slick-slider .slick-dots {
+        width: 100%;
+        bottom: 0px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .ddr-widget__slideshow .slick-slider .slick-dots li {
+        vertical-align: baseline;
+    }
+
+    .ddr-widget__slideshow .slideshow-arrow,
+    .ddr-widget__slideshow .slideshow-dot {
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+    .ddr-widget__slideshow .slideshow-dot {
+        color: rgb(255, 255, 255);
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 50%;
+        width: 12px;
+        height: 12px;
+    }
+
+    .ddr-widget__slideshow .slideshow-arrow {
+        color: rgb(0, 0, 0);
+        position: absolute;
+        z-index: 99;
+        top: 50%;
+        font-size: 25px;
+        transform: translateY(-50%);
+    }
+
+    .ddr-widget__slideshow .slideshow-arrow-left {
+        left: 1%;
+    }
+
+    .ddr-widget__slideshow .slideshow-arrow-right {
+        right: 1%;
+    }
+
+    .ddr-widget__slideshow .slide-wrapper .slide {
         display: flex;
-    }
-
-    .ddr-widget__button a {
+        justify-content: center;
         overflow: hidden;
+        background-position: 50% center;
+        background-repeat: no-repeat;
+        background-size: auto;
     }
 
-    .ddr-widget__button>a>div {
-        display: block;
-        overflow: hidden;
-        background-color: rgb(0, 143, 162);
-        box-sizing: content-box;
-        word-break: break-all;
-        transition: all 0.5s ease 0s;
+    .ddr-widget__slideshow .slide-wrapper .slide img {
+        user-select: none;
+        margin: auto;
+        flex-shrink: 0;
     }
 
-    .ddr-widget__button a,
-    .ddr-widget__button a:active,
-    .ddr-widget__button a:focus,
-    .ddr-widget__button a:hover,
-    .ddr-widget__button a:link,
-    .ddr-widget__button a:visited {
-        display: inline-block;
-        vertical-align: middle;
-        color: inherit;
-        text-decoration: none;
-        border: none;
-        box-shadow: none;
-    }
-
-    .ddr-widget__icon {
-        position: relative;
-        text-align: center;
-        overflow: hidden;
-        display: flex;
-    }
-
-    .ddr-widget__icon>div {
-        display: inline-block;
-    }
-
-    .ddr-widget__icon a,
-    .ddr-widget__icon i {
-        font: initial;
-        overflow: hidden;
-    }
-
-    .ddr-widget__icon i {
-        display: block;
-    }
-
-    .ddr-widget__icon a,
-    .ddr-widget__icon a:active,
-    .ddr-widget__icon a:focus,
-    .ddr-widget__icon a:hover,
-    .ddr-widget__icon a:link,
-    .ddr-widget__icon a:visited {
-        display: inline-block;
-        vertical-align: middle;
-        color: inherit;
-        text-decoration: none;
-        box-sizing: border-box;
-        border: none;
-        box-shadow: none;
+    .ddr-widget__slideshow .slick-active .slideshow-dot {
+        border-color: rgb(226, 118, 37);
     }
 
     @media (min-width: 1281px) {
@@ -418,626 +389,71 @@
         }
     }
 
-    [data-ddr-page-widget-additional-css-id="8d7cc307fe"] {
-        font-family: 'Alex Brush', handwriting;
-    }
-
-    #ddr-rich-text-101 * {
-        font-size: 45px;
-    }
-
-    [data-ddr-page-widget-additional-css-id="926c0d5159"] {
+    .ddr-page-wrapper {
         font-family: 'Farro', sans-serif;
     }
 
-    [data-ddr-page-widget-additional-css-id="c0a1523980"] {
-        font-family: 'Lato', sans-serif;
+    [data-ddr-page-widget-additional-css-id="8a9ed8448b"] {
+        font-family: 'Lobster', display;
     }
 
-    #button-103 {
-        background-color: rgba(55, 221, 173, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
-    #button-103:hover {
-        background-color: rgba(21, 194, 146, 1);
-        border-color: rgba(21, 194, 146, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="158aebaa35"] {
-        font-family: 'Lato', sans-serif;
-    }
-
-    [data-ddr-page-widget-additional-css-id="778296f7df"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="778296f7df"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="d05c3737b3"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-2011 * {
-        line-height: 1.6;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="1d17af3bda"] {
-        font-family: 'Lato', sans-serif;
-    }
-
-    #ddr-rich-text-2012 * {
-        line-height: 1.7;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="1d17af3bda"] {
-        font-family: 'Lato', sans-serif;
-    }
-
-    #button-2013 {
-        background-color: rgba(55, 221, 173, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
-    #button-2013:hover {
-        background-color: rgba(21, 194, 146, 1);
-        border-color: rgba(21, 194, 146, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="158aebaa35"] {
-        font-family: 'Lato', sans-serif;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="d05c3737b3"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-3101 * {
-        line-height: 1.6;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="1a719608a3"] {
-        font-family: 'Lato', sans-serif;
-    }
-
-    #ddr-rich-text-3102 * {
-        line-height: 1.7;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="1d17af3bda"] {
-        font-family: 'Lato', sans-serif;
-    }
-
-    #button-3103 {
-        background-color: rgba(55, 221, 173, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
-    #button-3103:hover {
-        background-color: rgba(21, 194, 146, 1);
-        border-color: rgba(21, 194, 146, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="158aebaa35"] {
-        font-family: 'Lato', sans-serif;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="778296f7df"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-4102 * {
-        line-height: 1.2;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="778296f7df"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-5002 * {
-        line-height: 1.6;
-    }
-
-    #ddr-rich-text-5012 * {
-        line-height: 1.6;
-    }
-
-    #ddr-rich-text-5022 * {
-        line-height: 1.6;
-    }
-
-    #ddr-rich-text-6002 * {
-        line-height: 1.6;
-    }
-
-    #ddr-rich-text-6012 * {
-        line-height: 1.6;
-    }
-
-    #ddr-rich-text-6022 * {
-        line-height: 1.6;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="778296f7df"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-7102 * {
-        line-height: 1.2;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="778296f7df"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #button-8000 {
-        background-color: rgba(34, 25, 77, 0);
-        color: rgba(34, 25, 77, 0);
-    }
-
-    #button-8000:hover {
-        background-color: rgba(152, 104, 223, 1);
-        border-color: rgba(152, 104, 223, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
-    #button-8001 {
-        background-color: rgba(34, 25, 77, 0);
-        color: rgba(34, 25, 77, 0);
-    }
-
-    #button-8001:hover {
-        background-color: rgba(152, 104, 223, 1);
-        border-color: rgba(152, 104, 223, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
-    #button-8010 {
-        background-color: rgba(34, 25, 77, 0);
-        color: rgba(34, 25, 77, 0);
-    }
-
-    #button-8010:hover {
-        background-color: rgba(152, 104, 223, 1);
-        border-color: rgba(152, 104, 223, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
-    #button-8011 {
-        background-color: rgba(34, 25, 77, 0);
-        color: rgba(34, 25, 77, 0);
-    }
-
-    #button-8011:hover {
-        background-color: rgba(152, 104, 223, 1);
-        border-color: rgba(152, 104, 223, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
-    #button-8020 {
-        background-color: rgba(34, 25, 77, 0);
-        color: rgba(34, 25, 77, 0);
-    }
-
-    #button-8020:hover {
-        background-color: rgba(152, 104, 223, 1);
-        border-color: rgba(152, 104, 223, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
-    #button-8021 {
-        background-color: rgba(34, 25, 77, 0);
-        color: rgba(34, 25, 77, 0);
-    }
-
-    #button-8021:hover {
-        background-color: rgba(152, 104, 223, 1);
-        border-color: rgba(152, 104, 223, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="778296f7df"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-9102 * {
-        line-height: 0.8;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="778296f7df"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="778296f7df"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-11102 * {
-        line-height: 1.2;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="778296f7df"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="17ce3a50a0"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-12003 * {
-        line-height: 1.6;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="17ce3a50a0"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-12013 * {
-        line-height: 1.6;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="17ce3a50a0"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-12023 * {
-        line-height: 1.6;
-    }
-
-    #ddr-rich-text-13100 * {
-        line-height: 1.6;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="34805d82cd"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-13101 * {
-        line-height: 1.6;
-    }
-
-    #button-13102 {
-        background-color: rgba(55, 221, 173, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
-    #button-13102:hover {
-        background-color: rgba(21, 194, 146, 1);
-        border-color: rgba(21, 194, 146, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="158aebaa35"] {
-        font-family: 'Lato', sans-serif;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="778296f7df"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-14102 * {
-        line-height: 1.2;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="778296f7df"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="42c15de106"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-15011 * {
-        line-height: 1.6;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="27ffdeb040"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-15012 * {
-        line-height: 1.6;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="27ffdeb040"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-15013 * {
-        line-height: 1.6;
-    }
-
-    #button-15014 {
-        background-color: rgba(55, 221, 173, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
-    #button-15014:hover {
-        background-color: rgba(21, 194, 146, 1);
-        border-color: rgba(21, 194, 146, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="158aebaa35"] {
-        font-family: 'Lato', sans-serif;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="664e79b2a4"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-15041 * {
-        line-height: 1.6;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="27ffdeb040"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-15042 * {
-        line-height: 1.6;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="27ffdeb040"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-15043 * {
-        line-height: 1.6;
-    }
-
-    #button-15044 {
-        background-color: rgba(55, 221, 173, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
-    #button-15044:hover {
-        background-color: rgba(21, 194, 146, 1);
-        border-color: rgba(21, 194, 146, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="158aebaa35"] {
-        font-family: 'Lato', sans-serif;
-    }
-
-    [data-ddr-page-widget-additional-css-id="8a704b53ad"] {
-        font-family: 'Rubik', sans-serif;
-    }
-
-    #ddr-rich-text-15071 * {
-        line-height: 1.6;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="27ffdeb040"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-15072 * {
-        line-height: 1.6;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="27ffdeb040"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-15073 * {
-        line-height: 1.6;
-    }
-
-    #button-15074 {
-        background-color: rgba(55, 221, 173, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
-    #button-15074:hover {
-        background-color: rgba(21, 194, 146, 1);
-        border-color: rgba(21, 194, 146, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="158aebaa35"] {
-        font-family: 'Lato', sans-serif;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="778296f7df"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-16102 * {
-        line-height: 1.2;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="778296f7df"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-17001 * {
-        line-height: 1.6;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="2bd1867d24"] {
-        font-family: 'Lato', sans-serif;
-    }
-
-    #ddr-rich-text-17002 * {
-        line-height: 1.3;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="62d86bc54f"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-17021 * {
-        line-height: 1.6;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="12d08e102d"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-17022 * {
-        line-height: 1.3;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="15f7a6a087"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="778296f7df"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-18102 * {
-        line-height: 0.8;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="778296f7df"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-19001 * {
-        line-height: 1.6;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="96c3bc46d7"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-19011 * {
-        line-height: 1.6;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="96c3bc46d7"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-19021 * {
-        line-height: 1.6;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="96c3bc46d7"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #button-19100 {
-        background-color: rgba(55, 221, 173, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
-    #button-19100:hover {
-        background-color: rgba(21, 194, 146, 1);
-        border-color: rgba(21, 194, 146, 1);
-        color: rgba(255, 255, 255, 1);
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="158aebaa35"] {
-        font-family: 'Lato', sans-serif;
-    }
-
-    #ddr-rich-text-21111 * {
-        line-height: 1.6;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="8744febe29"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-21131 * {
-        line-height: 1.6;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="cb799f52af"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    #ddr-rich-text-21151 * {
-        line-height: 1.6;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="bd316dbf4f"] {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    [data-ddr-page-widget-additional-css-id="20aa21f40f"] {
-        font-family: 'Asul', sans-serif;
-    }
-
-    undefined[data-ddr-page-widget-additional-css-id="c74b1c8dd9"] {
-        font-family: 'Roboto', sans-serif;
+    [data-ddr-page-widget-additional-css-id="708d7e305a"] {
+        font-family: 'Montserrat', sans-serif;
     }
 
     //-->
 </style>
-<div class="ddr-page-wrapper" data-ddr-page-id="e2f3c9c2-2ee6-11ea-bc9b-0242ac140009">
-    <div class="ddr-page">
-        <div id="ddr-061fe9d271" class="ddr-page-section-wrapper ddr-page-section-wrapper-0" style="background-image: url(&quot;https://cdn.dragdropr.com/a5c9dd23-3cf9-4fd3-bf22-ea10398ed38e/&quot;); background-size: cover; background-position: center center; background-repeat: no-repeat;">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-0" style="max-width: 1200px; margin: auto;">
-                <div class="ddr-page-section ddr-page-section-0">
+<script type="text/javascript">
+    <!--
+    (function() {
+        var head = document.getElementsByTagName('head').item(0),
+            url = 'https://app.dragdropr.com/components/dependency-manager.js?version=1.0.8';
+
+        for (var i = 0; i < head.children.length; i++) {
+            if (head.children.item(i).tagName === 'SCRIPT' && head.children.item(i).src.indexOf(url) !== -1) {
+                return;
+            }
+        }
+
+        var node = document.createElement('script');
+        node.async = 1;
+        node.src = url;
+        head.insertBefore(node, null);
+    })();
+
+    //-->
+</script>
+<div class="ddr-page-wrapper" data-ddr-page-id="2336f7e2-3046-11ea-8863-0242ac140009" style="background-color: rgb(198, 191, 236);">
+    <div class="ddr-page" style="color: rgb(152, 104, 223);">
+        <div id="ddr-8cef1ff01f" class="ddr-page-section-wrapper ddr-page-section-wrapper-0">
+            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-0">
+                <div class="ddr-page-section ddr-page-section-0" style="background-image: url(&quot;https://cdn.dragdropr.com/e1f95918-6b74-4906-810c-b0edc2e92ee1/&quot;); background-attachment: fixed; background-size: cover; background-position: center center; background-repeat: no-repeat; color: rgb(152, 143, 197);">
                     <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-fe9ce1ef38" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                            <div id="ddr-c3e3f07a76" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
                                 <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 50px;"></div>
+                                    <div class="ddr-widget__spacer" style="height: 200px;"></div>
+                                </div>
+                            </div>
+                            <div id="ddr-7ceef30ffe" class="ddr-page-widget ddr-page-widget__headline ddr-page-widget-1 " data-ddr-page-widget-additional-css-id="8a9ed8448b">
+                                <div class="ddr-widget" style="background-position: center center;">
+                                    <h1 class="ddr-widget__headline" style="margin: 30px; text-align: center; font-size: 110px; color: rgb(114, 46, 216);">Redmi Note 8 pro</h1>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-c8bc8d907b" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 " data-ddr-page-widget-additional-css-id="8d7cc307fe">
+                            <div id="ddr-0ea5ee6f52" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 " data-ddr-page-widget-additional-css-id="708d7e305a">
                                 <div class="ddr-widget">
-                                    <div id="ddr-rich-text-100" class="ddr-widget__rich-text" style="margin: 0px 30px;">
-                                        <p style="text-align: center;"><span style="font-size: 40px; color: #9868df;"><strong>Welcome</strong></span></p>
+                                    <div id="ddr-rich-text-100" class="ddr-widget__rich-text" style="margin: 30px;">
+                                        <h1 class="entry_title entry-title" style="text-align: center;"><span style="color: #ffff99;">The Performance Champion in the Mid-Range Segment</span></h1>
                                     </div>
                                 </div>
                             </div>
-                            <div id="ddr-1de6d405ae" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 " data-ddr-page-widget-additional-css-id="926c0d5159">
-                                <div class="ddr-widget" style="background-position: center center;">
-                                    <div id="ddr-rich-text-101" class="ddr-widget__rich-text" style="margin: 0px 30px;">
-                                        <p style="text-align: center;"><span style="font-size: 40px;"><strong>Multipurpose Landing Page</strong></span></p>
-                                        <p style="text-align: center;"><span style="font-size: 40px; color: #9868df;"><strong>Portfolio</strong></span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-c6e29ab359" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 " data-ddr-page-widget-additional-css-id="c0a1523980">
+                            <div id="ddr-f60b8e40cc" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-1 ">
                                 <div class="ddr-widget">
-                                    <div id="ddr-rich-text-102" class="ddr-widget__rich-text" style="margin: 10px 30px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span></p>
-                                        <p style="text-align: center;"><span style="color: #797979;">Lorem Ipsum has been the industry's standard.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-ad2522c03a" class="ddr-page-widget ddr-page-widget__button ddr-page-widget-3 " data-ddr-page-widget-additional-css-id="158aebaa35">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__button" style="justify-content: center;"><a target="_self" style="margin: 0px 30px; border-radius: 100px;">
-                                            <div id="button-103" style="padding: 15px 30px; font-size: 18px;">Get Started</div>
-                                        </a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-2 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-b3451efb5c" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self"><img src="https://cdn.dragdropr.com/e0369f40-8aed-4b0d-b9d4-5ac0deae6f21/" style="height: auto; width: 100%;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-3 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-33796c3930" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 50px;"></div>
+                                    <div class="ddr-widget__spacer" style="height: 215px;"></div>
                                 </div>
                             </div>
                         </div>
@@ -1045,49 +461,14 @@
                 </div>
             </div>
         </div>
-        <div id="ddr-52e1fda8b5" class="ddr-page-section-wrapper ddr-page-section-wrapper-1" style="background-color: rgb(249, 249, 249);">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-1" style="max-width: 1200px; margin: auto;">
+        <div id="ddr-05b676cbb5" class="ddr-page-section-wrapper ddr-page-section-wrapper-1" style="background-color: rgb(244, 244, 244);">
+            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-1" style="max-width: 1024px; margin: auto;">
                 <div class="ddr-page-section ddr-page-section-1">
                     <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-2e4b543942" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                            <div id="ddr-7fa43acf8b" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
                                 <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-b15d369169" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 " data-ddr-page-widget-additional-css-id="778296f7df">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-1100" class="ddr-widget__rich-text" style="margin: 0px 30px 3px;">
-                                        <p style="text-align: center;"><strong><span style="font-size: 36px;">What <span style="color: #9868df;">We Are?</span></span></strong></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-8a8a3ec378" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-1 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 100px; height: auto;"><img src="https://cdn.dragdropr.com/b59d485c-e8b3-4b3a-b456-eee0237a6af2/" style="height: auto; width: 100px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-56f1cb3ab6" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 " data-ddr-page-widget-additional-css-id="778296f7df">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-1102" class="ddr-widget__rich-text" style="margin: 0px 30px 3px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Loremsum has been the</span></p>
-                                        <p style="text-align: center;"><span style="color: #797979;">industry's standard dummy text ever since the lorem.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-2 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-39635c35db" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 30px;"></div>
+                                    <div class="ddr-widget__spacer" style="height: 70px;"></div>
                                 </div>
                             </div>
                         </div>
@@ -1095,134 +476,38 @@
                 </div>
             </div>
         </div>
-        <div id="ddr-903e39a460" class="ddr-page-section-wrapper ddr-page-section-wrapper-2" style="background-color: rgb(249, 249, 249);">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-2" style="max-width: 1200px; margin: auto;">
-                <div class="ddr-page-section ddr-page-section-2">
-                    <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 50%;">
-                            <div id="ddr-f6f34664f9" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 500px; height: auto; margin-bottom: 50px; margin-top: 50px;"><img src="https://cdn.dragdropr.com/b3cb9655-070f-4a4f-8734-9cb080e9d305/" style="height: auto; width: 500px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 50%;">
-                            <div id="ddr-972641753e" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 " data-ddr-page-widget-additional-css-id="d05c3737b3">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-2010" class="ddr-widget__rich-text" style="margin: 10px 30px;">
-                                        <h3 class="h3-sm default-color animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="400"><span style="font-size: 36px; color: #9868df;"><span style="font-size: 16px;">Welcome Our Page</span></span></h3>
-                                        <h3 class="h3-sm default-color animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="400"><span style="font-size: 36px;"><strong>We're making design better for everyone.</strong></span></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-b1699426f5" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 " data-ddr-page-widget-additional-css-id="1d17af3bda">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-2011" class="ddr-widget__rich-text" style="margin: 0px 30px 10px;">
-                                        <h3 class="h3-sm default-color animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="400"><span style="font-size: 16px; color: #797979;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-f8e1b9db5c" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 " data-ddr-page-widget-additional-css-id="1d17af3bda">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-2012" class="ddr-widget__rich-text" style="margin: 0px 30px 10px 10px;">
-                                        <ul class="content-list" style="list-style-type: circle;">
-                                            <li class="animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="600">Fully Responsive Design</li>
-                                            <li class="animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="700">Bootstrap 4.0 Based</li>
-                                            <li class="animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="800">Google Analytics Ready</li>
-                                            <li class="animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="900">Cross Browser Compatability</li>
-                                            <li class="animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="900">and much more…</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-9b991bafca" class="ddr-page-widget ddr-page-widget__button ddr-page-widget-3 " data-ddr-page-widget-additional-css-id="158aebaa35">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__button" style="justify-content: flex-start;"><a target="_self" style="margin: 0px 30px; border-radius: 100px;">
-                                            <div id="button-2013" style="padding: 15px 30px; font-size: 18px;">Read More</div>
-                                        </a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-262cd6da93" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
+        <div class="ddr-page-row ddr-page-row-2 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
+            <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
+                <div id="ddr-bf83948198" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 ">
+                    <div class="ddr-widget" style="background-color: rgb(255, 255, 255); background-position: center center; background-size: contain;">
+                        <div id="ddr-rich-text-200" class="ddr-widget__rich-text" style="margin: 30px; border-style: solid; border-width: 1px; border-color: rgb(58, 27, 214); border-radius: 24px;">
+                            <p style="text-align: center;"><span style="font-size: 20px;">Xiaomi’s game has seen a big, big step up in the past few years. We can’t help but remember a small startup that was founded in 2010 and went around making MIUI custom ROMs for a handful of smartphones, launching its first foray into hardware all the way back in 2011 with the Xiaomi Mi 1, known back then as the “Xiaomi Phone”. Nowadays, though, Xiaomi barely resembles that small startup of old as the company is embarking towards taking over the world, managing to take the steering wheel and eventually even lead innovation on its own with devices like the Mi Mix Alpha.</span></p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="ddr-ddc6b868c4" class="ddr-page-section-wrapper ddr-page-section-wrapper-3">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-3" style="max-width: 1200px; margin: auto;">
+        <div id="ddr-66448e7f3c" class="ddr-page-section-wrapper ddr-page-section-wrapper-3">
+            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-3">
                 <div class="ddr-page-section ddr-page-section-3">
                     <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-0188e6a1ee" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
+                            <div id="ddr-f3eac7f5ec" class="ddr-page-widget ddr-page-widget__slideshow ddr-page-widget-0 ">
                                 <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 50%;">
-                            <div id="ddr-a41ac93d84" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 " data-ddr-page-widget-additional-css-id="d05c3737b3">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-3100" class="ddr-widget__rich-text" style="margin: 10px 30px;">
-                                        <h3 class="h3-sm default-color animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="400"><span style="font-size: 36px; color: #9868df;"><span style="font-size: 16px;">Digital Strategy</span></span></h3>
-                                        <h3 class="h3-sm default-color animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="400"><strong><span style="font-size: 36px;">We're working towards your business goals.</span></strong></h3>
+                                    <div class="ddr-widget__slideshow" style="height: 358px; border-style: solid; border-width: 1px; border-radius: 32px;">
+                                        <div class="slide-wrapper">
+                                            <div class="slide" style="background-image: url(&quot;https://cdn.dragdropr.com/b2dfed6f-a6f3-47e4-b219-a55e64e23bd1/&quot;); background-position: center center; background-size: cover;"></div>
+                                        </div>
+                                        <div class="slide-wrapper">
+                                            <div class="slide" style="background-image: url(&quot;https://cdn.dragdropr.com/1de21ff0-f0eb-4c8c-b456-351c199b19b2/&quot;); background-position: center center; background-size: cover;"></div>
+                                        </div>
+                                        <div class="slide-wrapper">
+                                            <div class="slide" style="background-image: url(&quot;https://cdn.dragdropr.com/2ed1be87-8319-434a-939a-710207ffee42/&quot;); background-position: center center; background-size: cover;"></div>
+                                        </div>
+                                        <div class="slide-wrapper">
+                                            <div class="slide" style="background-image: url(&quot;https://cdn.dragdropr.com/f174add1-ebb2-48b9-8566-c49786ed0c78/&quot;); background-position: center center; background-size: cover;"></div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div id="ddr-62e97002e4" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 " data-ddr-page-widget-additional-css-id="1a719608a3">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-3101" class="ddr-widget__rich-text" style="margin: 0px 30px 10px;">
-                                        <h3 class="h3-sm default-color animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="400"><span style="font-size: 16px; color: #797979;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span></h3>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-b8fe4062c1" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 " data-ddr-page-widget-additional-css-id="1d17af3bda">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-3102" class="ddr-widget__rich-text" style="margin: 0px 30px 10px 10px;">
-                                        <ul class="content-list" style="list-style-type: circle;">
-                                            <li class="animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="600">Fully Responsive Design</li>
-                                            <li class="animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="700">Bootstrap 4.0 Based</li>
-                                            <li class="animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="800">Google Analytics Ready</li>
-                                            <li class="animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="900">Cross Browser Compatability</li>
-                                            <li class="animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="1100">and much more…</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-fd951656a1" class="ddr-page-widget ddr-page-widget__button ddr-page-widget-3 " data-ddr-page-widget-additional-css-id="158aebaa35">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__button" style="justify-content: flex-start;"><a target="_self" style="margin: 0px 30px; border-radius: 100px;">
-                                            <div id="button-3103" style="padding: 15px 30px; font-size: 18px;">Read More</div>
-                                        </a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 50%;">
-                            <div id="ddr-16eef93fbb" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 500px; height: auto; margin-bottom: 50px; margin-top: 50px;"><img src="https://cdn.dragdropr.com/91d2ca7f-a3c7-4320-98cd-c3c933b2824b/" style="height: auto; width: 500px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-2 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-6a2e786c44" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
                                 </div>
                             </div>
                         </div>
@@ -1230,1472 +515,97 @@
                 </div>
             </div>
         </div>
-        <div id="ddr-31e2edfc23" class="ddr-page-section-wrapper ddr-page-section-wrapper-4" style="background-color: rgb(249, 249, 249);">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-4" style="max-width: 1200px; margin: auto;">
+        <div id="ddr-9aefb6bfe8" class="ddr-page-section-wrapper ddr-page-section-wrapper-4">
+            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-4">
                 <div class="ddr-page-section ddr-page-section-4">
                     <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
                         <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-5a97472709" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-0376409066" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 " data-ddr-page-widget-additional-css-id="778296f7df">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-4100" class="ddr-widget__rich-text" style="margin: 0px 30px 3px;">
-                                        <p style="text-align: center;"><span style="font-size: 36px;"><strong>Our <span style="color: #9868df;">Awesome Features!</span></strong></span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-46f226f208" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-1 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 100px; height: auto;"><img src="https://cdn.dragdropr.com/b59d485c-e8b3-4b3a-b456-eee0237a6af2/" style="height: auto; width: 100px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-4e32c4b0f3" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 " data-ddr-page-widget-additional-css-id="778296f7df">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-4102" class="ddr-widget__rich-text" style="margin: 0px 30px 3px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Loremsum has been the</span></p>
-                                        <p style="text-align: center;"><span style="color: #797979;">industry's standard dummy text ever since the lorem.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-2 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-4cce8d2037" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 30px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="ddr-777eb922da" class="ddr-page-section-wrapper ddr-page-section-wrapper-5" style="background-color: rgb(249, 249, 249);">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-5" style="max-width: 1200px; margin: auto;">
-                <div class="ddr-page-section ddr-page-section-5">
-                    <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 33.3333%;">
-                            <div id="ddr-a1dfd489ac" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 50px; height: auto;"><img src="https://cdn.dragdropr.com/e90e469f-b2a1-4ed7-9e24-9d1df6470d59/" style="height: auto; width: 50px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-1bf2e1bb5f" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 ">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-5001" class="ddr-widget__rich-text" style="margin: 10px 30px;">
-                                        <p style="text-align: center;"><strong><span style="font-size: 22px;">Super Speed</span></strong></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-f072a049db" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 ">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-5002" class="ddr-widget__rich-text" style="margin: 0px 30px 30px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 33.3333%;">
-                            <div id="ddr-c8554b9e2d" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 50px; height: auto;"><img src="https://cdn.dragdropr.com/d489bd4f-6b48-4f98-81f3-1a6c589614ec/" style="height: auto; width: 50px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-e3de6b1390" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 ">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-5011" class="ddr-widget__rich-text" style="margin: 10px 30px;">
-                                        <p style="text-align: center;"><strong><span style="font-size: 22px;">Great Quality</span></strong></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-a35eaa4f4b" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 ">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-5012" class="ddr-widget__rich-text" style="margin: 0px 30px 30px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-2 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 33.3333%;">
-                            <div id="ddr-3957ab10d2" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 50px; height: auto;"><img src="https://cdn.dragdropr.com/1f192154-970a-4aa1-9540-64b7d74c0e76/" style="height: auto; width: 50px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-d39126f5f7" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 ">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-5021" class="ddr-widget__rich-text" style="margin: 10px 30px;">
-                                        <p style="text-align: center;"><strong><span style="font-size: 22px;">Best Expertise</span></strong></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-bb8e0895a2" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 ">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-5022" class="ddr-widget__rich-text" style="margin: 0px 30px 30px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius70mod tempor incididunt ut labore et dolore.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="ddr-696be1e31f" class="ddr-page-section-wrapper ddr-page-section-wrapper-6" style="background-color: rgb(249, 249, 249);">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-6" style="max-width: 1200px; margin: auto;">
-                <div class="ddr-page-section ddr-page-section-6">
-                    <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 33.3333%;">
-                            <div id="ddr-dab3024a9c" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 50px; height: auto;"><img src="https://cdn.dragdropr.com/c65dc500-6957-485c-945c-286fd35fc373/" style="height: auto; width: 50px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-018dc3acd2" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 ">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-6001" class="ddr-widget__rich-text" style="margin: 10px 30px;">
-                                        <p style="text-align: center;"><strong><span style="font-size: 22px;">Easy To Use</span></strong></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-e0b7485e7c" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 ">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-6002" class="ddr-widget__rich-text" style="margin: 0px 30px 30px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 33.3333%;">
-                            <div id="ddr-454afaf642" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 50px; height: auto;"><img src="https://cdn.dragdropr.com/9121c373-db33-4444-b852-cbcece1b8649/" style="height: auto; width: 50px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-b8b2eaec1b" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 ">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-6011" class="ddr-widget__rich-text" style="margin: 10px 30px;">
-                                        <p style="text-align: center;"><strong><span style="font-size: 22px;">Great Reli</span></strong></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-66702d33ec" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 ">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-6012" class="ddr-widget__rich-text" style="margin: 0px 30px 30px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-2 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 33.3333%;">
-                            <div id="ddr-fd4e849cf0" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 50px; height: auto;"><img src="https://cdn.dragdropr.com/7f0dcdff-c9ea-483f-8f34-9cb0834b22b2/" style="height: auto; width: 50px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-0489a73e6d" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 ">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-6021" class="ddr-widget__rich-text" style="margin: 10px 30px;">
-                                        <p style="text-align: center;"><strong><span style="font-size: 22px;">Responsive Design</span></strong></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-6ccca49682" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 ">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-6022" class="ddr-widget__rich-text" style="margin: 0px 30px 30px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-31adcf3730" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 70px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="ddr-9f2ade9d7b" class="ddr-page-section-wrapper ddr-page-section-wrapper-7">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-7" style="max-width: 1200px; margin: auto;">
-                <div class="ddr-page-section ddr-page-section-7">
-                    <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-2fda7b8188" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-7cff37aa3e" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 " data-ddr-page-widget-additional-css-id="778296f7df">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-7100" class="ddr-widget__rich-text" style="margin: 0px 30px 3px;">
-                                        <p style="text-align: center;"><span style="font-size: 36px;"><strong>Our <span style="color: #9868df;">Recent Portfolio!</span></strong></span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-c7537da51e" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-1 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 100px; height: auto;"><img src="https://cdn.dragdropr.com/b59d485c-e8b3-4b3a-b456-eee0237a6af2/" style="height: auto; width: 100px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-947eaeb44f" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 " data-ddr-page-widget-additional-css-id="778296f7df">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-7102" class="ddr-widget__rich-text" style="margin: 0px 30px 3px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Loremsum has been the</span></p>
-                                        <p style="text-align: center;"><span style="color: #797979;">industry's standard dummy text ever since the lorem.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-2 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-7cff7bca76" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 50px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="ddr-138d88f7fc" class="ddr-page-section-wrapper ddr-page-section-wrapper-8">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-8" style="max-width: 1200px; margin: auto;">
-                <div class="ddr-page-section ddr-page-section-8">
-                    <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 33.3333%;">
-                            <div id="ddr-d8f09573b9" class="ddr-page-widget ddr-page-widget__button ddr-page-widget-0 ">
-                                <div class="ddr-widget" style="background-image: url(&quot;https://cdn.dragdropr.com/6d19a157-5374-4c95-b3a0-695de4b57aee/&quot;); background-size: cover; background-position: center center; opacity: 1; background-repeat: no-repeat;">
-                                    <div class="ddr-widget__button" style="justify-content: center;"><a target="_self" style="margin: 30px; border-radius: 3px; box-shadow: 0px 0px 0px 0px;">
-                                            <div id="button-8000" style="padding: 92px 173px 93px 170px; font-size: 100px;">+</div>
-                                        </a></div>
-                                </div>
-                            </div>
-                            <div id="ddr-77033d3a29" class="ddr-page-widget ddr-page-widget__button ddr-page-widget-1 ">
-                                <div class="ddr-widget" style="background-image: url(&quot;https://cdn.dragdropr.com/755464da-624b-450a-a6ac-905a902017f8/&quot;); background-size: cover; background-position: center center; opacity: 1; background-repeat: no-repeat;">
-                                    <div class="ddr-widget__button" style="justify-content: center;"><a target="_self" style="margin: 30px; border-radius: 3px; box-shadow: 0px 0px 0px 0px;">
-                                            <div id="button-8001" style="padding: 92px 173px 93px 170px; font-size: 100px;">+</div>
-                                        </a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 33.3333%;">
-                            <div id="ddr-f36402a65b" class="ddr-page-widget ddr-page-widget__button ddr-page-widget-0 ">
-                                <div class="ddr-widget" style="background-image: url(&quot;https://cdn.dragdropr.com/b746ca31-249c-4ce5-b201-cdf5659d1d65/&quot;); background-size: cover; background-position: center center; opacity: 1; background-repeat: no-repeat;">
-                                    <div class="ddr-widget__button" style="justify-content: center;"><a target="_self" style="margin: 30px; border-radius: 3px; box-shadow: 0px 0px 0px 0px;">
-                                            <div id="button-8010" style="padding: 92px 173px 93px 170px; font-size: 100px;">+</div>
-                                        </a></div>
-                                </div>
-                            </div>
-                            <div id="ddr-0be19b8aec" class="ddr-page-widget ddr-page-widget__button ddr-page-widget-1 ">
-                                <div class="ddr-widget" style="background-image: url(&quot;https://cdn.dragdropr.com/d0ffb34a-2aa8-4730-95b7-e54330c2b00f/&quot;); background-size: cover; background-position: center center; opacity: 1; background-repeat: no-repeat;">
-                                    <div class="ddr-widget__button" style="justify-content: center;"><a target="_self" style="margin: 30px; border-radius: 3px; box-shadow: 0px 0px 0px 0px;">
-                                            <div id="button-8011" style="padding: 92px 173px 93px 170px; font-size: 100px;">+</div>
-                                        </a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-2 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 33.3333%;">
-                            <div id="ddr-dde4252348" class="ddr-page-widget ddr-page-widget__button ddr-page-widget-0 ">
-                                <div class="ddr-widget" style="background-image: url(&quot;https://cdn.dragdropr.com/529d0ee1-a8d4-438a-ada3-dfe5c259e790/&quot;); background-size: cover; background-position: center center; opacity: 1; background-repeat: no-repeat;">
-                                    <div class="ddr-widget__button" style="justify-content: center;"><a target="_self" style="margin: 30px; border-radius: 3px; box-shadow: 0px 0px 0px 0px;">
-                                            <div id="button-8020" style="padding: 92px 173px 93px 170px; font-size: 100px;">+</div>
-                                        </a></div>
-                                </div>
-                            </div>
-                            <div id="ddr-b368af123e" class="ddr-page-widget ddr-page-widget__button ddr-page-widget-1 ">
-                                <div class="ddr-widget" style="background-image: url(&quot;https://cdn.dragdropr.com/be56277a-6add-48e9-a8eb-01034a4f34e6/&quot;); background-size: cover; background-position: center center; opacity: 1; background-repeat: no-repeat;">
-                                    <div class="ddr-widget__button" style="justify-content: center;"><a target="_self" style="margin: 30px; border-radius: 3px; box-shadow: 0px 0px 0px 0px;">
-                                            <div id="button-8021" style="padding: 92px 173px 93px 170px; font-size: 100px;">+</div>
-                                        </a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-e3a4ac59fd" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="ddr-f13f5e36de" class="ddr-page-section-wrapper ddr-page-section-wrapper-9" style="background-color: rgb(249, 249, 249);">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-9" style="max-width: 1200px; margin: auto;">
-                <div class="ddr-page-section ddr-page-section-9">
-                    <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-b567528e4d" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-f0e733545e" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 " data-ddr-page-widget-additional-css-id="778296f7df">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-9100" class="ddr-widget__rich-text" style="margin: 0px 30px 3px;">
-                                        <p style="text-align: center;"><span style="font-size: 36px;"><strong>Some Of Our <span style="color: #9868df;">Real Fact!</span></strong></span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-f9e6007880" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-1 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 100px; height: auto;"><img src="https://cdn.dragdropr.com/b59d485c-e8b3-4b3a-b456-eee0237a6af2/" style="height: auto; width: 100px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-38007a7376" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 " data-ddr-page-widget-additional-css-id="778296f7df">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-9102" class="ddr-widget__rich-text" style="margin: 0px 30px 3px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Loremsum has been the</span></p>
-                                        <p style="text-align: center;"><span style="color: #797979;">industry's standard dummy text ever since the lorem.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-2 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-6177fd571b" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 50px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="ddr-84a73b4e6a" class="ddr-page-section-wrapper ddr-page-section-wrapper-10" style="background-color: rgb(249, 249, 249);">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-10" style="max-width: 1200px; margin: auto;">
-                <div class="ddr-page-section ddr-page-section-10">
-                    <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 33.3333%;">
-                            <div id="ddr-aef13ca946" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 50px; height: auto;"><img src="https://cdn.dragdropr.com/f87bbf71-e072-4c45-bb15-3ea42a7712fb/" style="height: auto; width: 50px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-8279a783a3" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 ">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-10001" class="ddr-widget__rich-text" style="margin: 30px;">
-                                        <p style="text-align: center;"><span style="font-size: 50px; color: #9868df;"><strong>540+</strong></span></p>
-                                        <p style="text-align: center;"><span style="font-size: 20px;">Happy Clients</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 33.3333%;">
-                            <div id="ddr-1b5217b999" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 50px; height: auto;"><img src="https://cdn.dragdropr.com/b77f16fb-c3d3-48e0-b6c4-555add07932b/" style="height: auto; width: 50px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-1d07e5ab63" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 ">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-10011" class="ddr-widget__rich-text" style="margin: 30px;">
-                                        <p style="text-align: center;"><span style="font-size: 50px; color: #9868df;"><strong>1200+</strong></span></p>
-                                        <p style="text-align: center;"><span style="font-size: 20px;">Projects Complete</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-2 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 33.3333%;">
-                            <div id="ddr-ff53231d05" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 50px; height: auto;"><img src="https://cdn.dragdropr.com/0b9e70db-0ce3-4121-8f35-757aac81d695/" style="height: auto; width: 50px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-228aaed6ef" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 ">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-10021" class="ddr-widget__rich-text" style="margin: 30px;">
-                                        <p style="text-align: center;"><span style="font-size: 50px; color: #9868df;"><strong>30,000</strong></span></p>
-                                        <p style="text-align: center;"><span style="font-size: 20px;">Work Time</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-354fdf7ea6" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 70px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="ddr-07f1e4f0a6" class="ddr-page-section-wrapper ddr-page-section-wrapper-11">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-11" style="max-width: 1200px; margin: auto;">
-                <div class="ddr-page-section ddr-page-section-11">
-                    <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-2b6e2bb225" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-c8a8428bfe" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 " data-ddr-page-widget-additional-css-id="778296f7df">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-11100" class="ddr-widget__rich-text" style="margin: 0px 30px 3px;">
-                                        <p style="text-align: center;"><span style="font-size: 36px;"><strong><span>Our <span style="color: #9868df;">Excellent Team!</span></span></strong></span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-ee7cdd4a72" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-1 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 100px; height: auto;"><img src="https://cdn.dragdropr.com/b59d485c-e8b3-4b3a-b456-eee0237a6af2/" style="height: auto; width: 100px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-ee49a64398" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 " data-ddr-page-widget-additional-css-id="778296f7df">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-11102" class="ddr-widget__rich-text" style="margin: 0px 30px 3px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Loremsum has been the</span></p>
-                                        <p style="text-align: center;"><span style="color: #797979;">industry's standard dummy text ever since the lorem.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-2 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-6cb266913b" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 50px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="ddr-258fe62493" class="ddr-page-section-wrapper ddr-page-section-wrapper-12">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-12" style="max-width: 1200px; margin: auto;">
-                <div class="ddr-page-section ddr-page-section-12">
-                    <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 33.3333%;">
-                            <div id="ddr-15c310405f" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 250px; height: auto;"><img src="https://cdn.dragdropr.com/62b65cac-3088-4668-b666-63a0e53313ba/" style="height: auto; width: 250px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-6c1ed9872b" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 " data-ddr-page-widget-additional-css-id="17ce3a50a0">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-12001" class="ddr-widget__rich-text" style="margin: 30px 30px 20px;">
-                                        <p style="text-align: center;"><strong><span style="font-size: 22px;">Megan Coleman</span></strong></p>
-                                        <p style="text-align: center;"><span style="font-size: 16px; color: #9868df;">Founder</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-9352fe0c8c" class="ddr-page-widget ddr-page-widget__icon ddr-page-widget-2 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__icon" style="justify-content: center;"><a target="_self" style="margin: 0px 30px 3px;"><i class="fa fa-twitter" style="font-size: 30px; color: rgb(152, 104, 223); font-family: FontAwesome;"></i></a></div>
-                                </div>
-                            </div>
-                            <div id="ddr-ae62086d82" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-3 ">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-12003" class="ddr-widget__rich-text" style="margin: 0px 30px 30px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 33.3333%;">
-                            <div id="ddr-5f4d3d1976" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 250px; height: auto;"><img src="https://cdn.dragdropr.com/9b0df92e-7f3d-44fa-83af-ed1cbe9cfe63/" style="height: auto; width: 250px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-a2986ae0f2" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 " data-ddr-page-widget-additional-css-id="17ce3a50a0">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-12011" class="ddr-widget__rich-text" style="margin: 30px 30px 20px;">
-                                        <p style="text-align: center;"><strong><span style="font-size: 22px;">Mattew Anderson</span></strong></p>
-                                        <p style="text-align: center;"><span style="font-size: 16px; color: #9868df;">Co - Founder</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-c8b0e6380b" class="ddr-page-widget ddr-page-widget__icon ddr-page-widget-2 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__icon" style="justify-content: center;"><a target="_self" style="margin: 0px 30px 3px;"><i class="fa fa-twitter" style="font-size: 30px; color: rgb(152, 104, 223); font-family: FontAwesome;"></i></a></div>
-                                </div>
-                            </div>
-                            <div id="ddr-afb039813b" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-3 ">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-12013" class="ddr-widget__rich-text" style="margin: 0px 30px 30px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-2 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 33.3333%;">
-                            <div id="ddr-6d784e1075" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 250px; height: auto;"><img src="https://cdn.dragdropr.com/32acf7f2-0d19-4426-840e-af1f071cc4b9/" style="height: auto; width: 250px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-b6ac636c95" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 " data-ddr-page-widget-additional-css-id="17ce3a50a0">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-12021" class="ddr-widget__rich-text" style="margin: 30px 30px 20px;">
-                                        <p style="text-align: center;"><strong><span style="font-size: 22px;">Hannah Deo</span></strong></p>
-                                        <p style="text-align: center;"><span style="font-size: 16px; color: #9868df;">Founder</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-0fb90a7644" class="ddr-page-widget ddr-page-widget__icon ddr-page-widget-2 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__icon" style="justify-content: center;"><a target="_self" style="margin: 0px 30px 3px;"><i class="fa fa-twitter" style="font-size: 30px; color: rgb(152, 104, 223); font-family: FontAwesome;"></i></a></div>
-                                </div>
-                            </div>
-                            <div id="ddr-5d15ff4f52" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-3 ">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-12023" class="ddr-widget__rich-text" style="margin: 0px 30px 30px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-30265bc0ec" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 70px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="ddr-09a025630b" class="ddr-page-section-wrapper ddr-page-section-wrapper-13" style="background-color: rgb(249, 249, 249);">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-13" style="max-width: 1200px; margin: auto;">
-                <div class="ddr-page-section ddr-page-section-13">
-                    <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-931d3343fa" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 50%;">
-                            <div id="ddr-f29d294d5b" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 " data-ddr-page-widget-additional-css-id="34805d82cd">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-13100" class="ddr-widget__rich-text" style="margin: 30px 30px 0px;">
-                                        <h2 class="h2-sm txt-600 animated fadeInUp visible" data-animation="fadeInUp" data-animation-delay="300"><strong><span style="font-size: 50px;">Bring Your Ideas To Life With Us.</span></strong></h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-a5217085c1" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 ">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-13101" class="ddr-widget__rich-text" style="margin: 0px 30px 30px;">
-                                        <p><span style="color: #797979;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-4c2fe61db0" class="ddr-page-widget ddr-page-widget__button ddr-page-widget-2 " data-ddr-page-widget-additional-css-id="158aebaa35">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__button" style="justify-content: flex-start;"><a target="_self" style="margin: 0px 30px 30px; border-radius: 100px;">
-                                            <div id="button-13102" style="padding: 15px 30px; font-size: 18px;">Get Started Now</div>
-                                        </a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 50%;">
-                            <div id="ddr-ff14a7edf2" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 380px; height: auto;"><img src="https://cdn.dragdropr.com/f3556796-adf2-4813-9804-26a52d3a2fbd/" style="height: auto; width: 380px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="ddr-1daf9f7f37" class="ddr-page-section-wrapper ddr-page-section-wrapper-14">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-14" style="max-width: 1200px; margin: auto;">
-                <div class="ddr-page-section ddr-page-section-14">
-                    <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-f13ea7df44" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-c5ab437b3b" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 " data-ddr-page-widget-additional-css-id="778296f7df">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-14100" class="ddr-widget__rich-text" style="margin: 0px 30px 3px;">
-                                        <p style="text-align: center;"><span style="font-size: 36px;"><strong>Our <span style="color: #9868df;">Pricing Plan!</span></strong></span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-ae88418a29" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-1 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 100px; height: auto;"><img src="https://cdn.dragdropr.com/b59d485c-e8b3-4b3a-b456-eee0237a6af2/" style="height: auto; width: 100px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-cf8bae6100" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 " data-ddr-page-widget-additional-css-id="778296f7df">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-14102" class="ddr-widget__rich-text" style="margin: 0px 30px 3px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Loremsum has been the</span></p>
-                                        <p style="text-align: center;"><span style="color: #797979;">industry's standard dummy text ever since the lorem.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-2 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-7b836793f9" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 50px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="ddr-7ed53c2813" class="ddr-page-section-wrapper ddr-page-section-wrapper-15">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-15" style="max-width: 1200px; margin: auto;">
-                <div class="ddr-page-section ddr-page-section-15">
-                    <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 " style="width: 2.77778%;">
-                            <div id="ddr-1fa83505bd" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 25px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 " style="width: 27.7778%;">
-                            <div id="ddr-9533500a5e" class="ddr-page-widget ddr-page-widget__headline ddr-page-widget-0 " data-ddr-page-widget-additional-css-id="42c15de106">
-                                <div class="ddr-widget" style="background-color: rgb(152, 104, 223);">
-                                    <h4 class="ddr-widget__headline" style="margin: 10px 25px; text-align: center; color: rgb(255, 255, 255); font-size: 16px;">
-                                        <p><strong><span style="font-size: 22px;">Basic Plan</span></strong></p>
-                                    </h4>
-                                </div>
-                            </div>
-                            <div id="ddr-bd7e62dc38" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 " data-ddr-page-widget-additional-css-id="27ffdeb040">
-                                <div class="ddr-widget" style="background-color: rgba(63, 78, 253, 0.05);">
-                                    <div id="ddr-rich-text-15011" class="ddr-widget__rich-text" style="margin: 0px 15px;">
-                                        <p style="text-align: center;">&nbsp;$&nbsp; <strong><span style="font-size: 60px;">29</span></strong>/month</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-08fb0bb2cb" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 " data-ddr-page-widget-additional-css-id="27ffdeb040">
-                                <div class="ddr-widget" style="background-color: rgba(63, 78, 253, 0.05);">
-                                    <div id="ddr-rich-text-15012" class="ddr-widget__rich-text" style="margin: 0px 15px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">Lorem Ipsum is simply dummy text of the printing and industry.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-6dc49d4722" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-3 ">
-                                <div class="ddr-widget" style="background-color: rgba(63, 78, 253, 0.05);">
-                                    <div id="ddr-rich-text-15013" class="ddr-widget__rich-text" style="margin: 0px 13px 15px;">
-                                        <p style="text-align: center;"><span style="font-size: 16px; color: #111111;">Ultimate Features</span></p>
-                                        <p style="text-align: center;"><span style="font-size: 16px; color: #111111;">Responsive Ready</span></p>
-                                        <p style="text-align: center;"><span style="font-size: 16px; color: #111111;">Visual Composer Included</span></p>
-                                        <p style="text-align: center;"><span style="font-size: 16px; color: #111111;">24/7 Support System</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-c3b801e983" class="ddr-page-widget ddr-page-widget__button ddr-page-widget-4 " data-ddr-page-widget-additional-css-id="158aebaa35">
-                                <div class="ddr-widget" style="background-color: rgba(63, 78, 253, 0.05);">
-                                    <div class="ddr-widget__button" style="justify-content: center;"><a target="_self" style="margin: 0px 30px 30px; border-radius: 100px;">
-                                            <div id="button-15014" style="padding: 15px 30px; font-size: 18px;">Choose Plan</div>
-                                        </a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-2 ddr-page-column__wrap--320 ddr-page-column__wrap--480 " style="width: 2.77778%;">
-                            <div id="ddr-1a8aa7fadd" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 27px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-3 ddr-page-column__wrap--320 ddr-page-column__wrap--480 " style="width: 2.77778%;">
-                            <div id="ddr-fab04acd91" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 27px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-4 ddr-page-column__wrap--320 ddr-page-column__wrap--480 " style="width: 27.7778%;">
-                            <div id="ddr-4bc6566b8a" class="ddr-page-widget ddr-page-widget__headline ddr-page-widget-0 " data-ddr-page-widget-additional-css-id="664e79b2a4">
-                                <div class="ddr-widget" style="background-color: rgb(152, 104, 223);">
-                                    <h4 class="ddr-widget__headline" style="margin: 10px 25px; text-align: center; color: rgb(255, 255, 255); font-size: 16px;">
-                                        <p><strong><span style="font-size: 22px;">Standerd Plan</span></strong></p>
-                                    </h4>
-                                </div>
-                            </div>
-                            <div id="ddr-e734bcea1e" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 " data-ddr-page-widget-additional-css-id="27ffdeb040">
-                                <div class="ddr-widget" style="background-color: rgba(63, 78, 253, 0.05);">
-                                    <div id="ddr-rich-text-15041" class="ddr-widget__rich-text" style="margin: 0px 15px;">
-                                        <p style="text-align: center;">$&nbsp; <strong><span style="font-size: 60px;">49</span></strong>/month</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-3fa95eaeeb" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 " data-ddr-page-widget-additional-css-id="27ffdeb040">
-                                <div class="ddr-widget" style="background-color: rgba(63, 78, 253, 0.05);">
-                                    <div id="ddr-rich-text-15042" class="ddr-widget__rich-text" style="margin: 0px 15px 1px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">Lorem Ipsum is simply dummy text of the printing and industry.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-8e979a18a1" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-3 ">
-                                <div class="ddr-widget" style="background-color: rgba(63, 78, 253, 0.05);">
-                                    <div id="ddr-rich-text-15043" class="ddr-widget__rich-text" style="margin: 0px 13px 15px;">
-                                        <p style="text-align: center;"><span style="font-size: 16px; color: #111111;">Ultimate Features</span></p>
-                                        <p style="text-align: center;"><span style="font-size: 16px; color: #111111;">Responsive Ready</span></p>
-                                        <p style="text-align: center;"><span style="font-size: 16px; color: #111111;">Visual Composer Included</span></p>
-                                        <p style="text-align: center;"><span style="font-size: 16px; color: #111111;">24/7 Support System</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-7002202212" class="ddr-page-widget ddr-page-widget__button ddr-page-widget-4 " data-ddr-page-widget-additional-css-id="158aebaa35">
-                                <div class="ddr-widget" style="background-color: rgba(63, 78, 253, 0.05);">
-                                    <div class="ddr-widget__button" style="justify-content: center;"><a target="_self" style="margin: 0px 30px 30px; border-radius: 100px;">
-                                            <div id="button-15044" style="padding: 15px 30px; font-size: 18px;"><span style="background-color: rgb(55, 221, 173);">Choose Plan</span></div>
-                                        </a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-5 ddr-page-column__wrap--320 ddr-page-column__wrap--480 " style="width: 2.77778%;">
-                            <div id="ddr-85444e0c50" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 27px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-6 ddr-page-column__wrap--320 ddr-page-column__wrap--480 " style="width: 2.77778%;">
-                            <div id="ddr-96743189b1" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 27px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-7 ddr-page-column__wrap--320 ddr-page-column__wrap--480 " style="width: 27.7778%;">
-                            <div id="ddr-dd388b3670" class="ddr-page-widget ddr-page-widget__headline ddr-page-widget-0 " data-ddr-page-widget-additional-css-id="8a704b53ad">
-                                <div class="ddr-widget" style="background-color: rgb(152, 104, 223);">
-                                    <h4 class="ddr-widget__headline" style="margin: 10px 25px; text-align: center; color: rgb(255, 255, 255); font-size: 16px;">
-                                        <p><strong><span style="font-size: 22px;">Premium Plan</span></strong></p>
-                                    </h4>
-                                </div>
-                            </div>
-                            <div id="ddr-00b4747533" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 " data-ddr-page-widget-additional-css-id="27ffdeb040">
-                                <div class="ddr-widget" style="background-color: rgba(63, 78, 253, 0.05);">
-                                    <div id="ddr-rich-text-15071" class="ddr-widget__rich-text" style="margin: 0px 15px;">
-                                        <p style="text-align: center;">$&nbsp; <strong><span style="font-size: 60px;">69</span></strong>/month</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-0a64b90aa3" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 " data-ddr-page-widget-additional-css-id="27ffdeb040">
-                                <div class="ddr-widget" style="background-color: rgba(63, 78, 253, 0.05);">
-                                    <div id="ddr-rich-text-15072" class="ddr-widget__rich-text" style="margin: 0px 15px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">Lorem Ipsum is simply dummy text of the printing and industry.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-137def0da2" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-3 ">
-                                <div class="ddr-widget" style="background-color: rgba(63, 78, 253, 0.05);">
-                                    <div id="ddr-rich-text-15073" class="ddr-widget__rich-text" style="margin: 0px 13px 15px;">
-                                        <p style="text-align: center;"><span style="font-size: 16px; color: #111111;">Ultimate Features</span></p>
-                                        <p style="text-align: center;"><span style="font-size: 16px; color: #111111;">Responsive Ready</span></p>
-                                        <p style="text-align: center;"><span style="font-size: 16px; color: #111111;">Visual Composer Included</span></p>
-                                        <p style="text-align: center;"><span style="font-size: 16px; color: #111111;">24/7 Support System</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-1508d452b4" class="ddr-page-widget ddr-page-widget__button ddr-page-widget-4 " data-ddr-page-widget-additional-css-id="158aebaa35">
-                                <div class="ddr-widget" style="background-color: rgba(63, 78, 253, 0.05);">
-                                    <div class="ddr-widget__button" style="justify-content: center;"><a target="_self" style="margin: 0px 30px 30px; border-radius: 100px;">
-                                            <div id="button-15074" style="padding: 15px 30px; font-size: 18px;"><span style="background-color: rgb(55, 221, 173);">Choose Plan</span></div>
-                                        </a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-8 ddr-page-column__wrap--320 ddr-page-column__wrap--480 " style="width: 2.77778%;">
-                            <div id="ddr-45427317d1" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 27px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-acf4dfd5f6" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="ddr-e8545a8c4b" class="ddr-page-section-wrapper ddr-page-section-wrapper-16" style="background-color: rgb(249, 249, 249);">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-16" style="max-width: 1200px; margin: auto;">
-                <div class="ddr-page-section ddr-page-section-16">
-                    <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-316f31d586" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-ff35887a55" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 " data-ddr-page-widget-additional-css-id="778296f7df">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-16100" class="ddr-widget__rich-text" style="margin: 0px 30px 3px;">
-                                        <p style="text-align: center;"><span style="font-size: 36px;"><strong>Our <span style="color: #9868df;">Testimonials!</span></strong></span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-3fb1954dc0" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-1 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 100px; height: auto;"><img src="https://cdn.dragdropr.com/b59d485c-e8b3-4b3a-b456-eee0237a6af2/" style="height: auto; width: 100px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-663b4fd347" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 " data-ddr-page-widget-additional-css-id="778296f7df">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-16102" class="ddr-widget__rich-text" style="margin: 0px 30px 3px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Loremsum has been the</span></p>
-                                        <p style="text-align: center;"><span style="color: #797979;">industry's standard dummy text ever since the lorem.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-2 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-e5c4ae1a0f" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 50px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="ddr-5b04c0316c" class="ddr-page-section-wrapper ddr-page-section-wrapper-17" style="background-color: rgb(249, 249, 249);">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-17" style="max-width: 1200px; margin: auto;">
-                <div class="ddr-page-section ddr-page-section-17">
-                    <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 41.6667%;">
-                            <div id="ddr-ac32a729b9" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 70px; height: auto; margin-top: 20px;"><img src="https://cdn.dragdropr.com/12839c12-6363-481d-89d6-e2d491b9995f/" style="height: auto; width: 70px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-13716de89f" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 " data-ddr-page-widget-additional-css-id="2bd1867d24">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-17001" class="ddr-widget__rich-text" style="margin: 30px 30px 0px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">"It is a long established fact that a reader will be distracted by the readable content of a page an at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution ."</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-aa4a9222c3" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 " data-ddr-page-widget-additional-css-id="62d86bc54f">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-17002" class="ddr-widget__rich-text" style="margin: 0px 30px;">
-                                        <p style="text-align: center;"><span style="font-size: 22px;"><strong>Jack Smith</strong></span></p>
-                                        <p style="text-align: center;"><span style="font-size: 16px; color: #9868df;">Developer</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 ddr-page-column__hide--320 ddr-page-column__hide--480 ddr-page-column__hide--768" style="width: 16.6667%;">
-                            <div id="ddr-2e90fb7807" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ddr-page-widget__hide--320 ddr-page-widget__hide--480 ddr-page-widget__hide--768">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 1px; height: 320px; margin-top: 20px; margin-bottom: 20px;"><img src="https://cdn.dragdropr.com/ea572604-fb71-4ae7-a946-8d1761bbb107/" style="height: 320px; width: 1px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-2 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 41.6667%;">
-                            <div id="ddr-93b1e8df4e" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 70px; height: auto; margin-top: 20px;"><img src="https://cdn.dragdropr.com/a345bd49-e345-450d-80c9-15bb6c20b92b/" style="height: auto; width: 70px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-d677cd4b43" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 " data-ddr-page-widget-additional-css-id="12d08e102d">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-17021" class="ddr-widget__rich-text" style="margin: 30px 30px 0px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">"It is a long established fact that a reader will be distracted by the readable content of a page an at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution ."</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-5447304e9c" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 " data-ddr-page-widget-additional-css-id="15f7a6a087">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-17022" class="ddr-widget__rich-text" style="margin: 0px 30px;">
-                                        <p style="text-align: center;"><span style="font-size: 22px;"><strong>John Kim</strong></span></p>
-                                        <p style="text-align: center;"><span style="font-size: 16px; color: #9868df;">Developer</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-1f908efdbd" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 50px; height: auto; margin-top: 30px;"><img src="https://cdn.dragdropr.com/8792f580-cec1-4cda-9512-a189689de15e/" style="height: auto; width: 50px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-2 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 ddr-page-column__hide--320 ddr-page-column__hide--480 ddr-page-column__hide--768" style="width: 100%;">
-                            <div id="ddr-e110992fdd" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ddr-page-widget__hide--320 ddr-page-widget__hide--480 ddr-page-widget__hide--768">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="ddr-c914572451" class="ddr-page-section-wrapper ddr-page-section-wrapper-18">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-18" style="max-width: 1200px; margin: auto;">
-                <div class="ddr-page-section ddr-page-section-18">
-                    <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-d16e8bbc07" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-085a2fa030" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 " data-ddr-page-widget-additional-css-id="778296f7df">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-18100" class="ddr-widget__rich-text" style="margin: 0px 30px 3px;">
-                                        <p style="text-align: center;"><span style="font-size: 36px;"><strong>Our <span style="color: #9868df;">Latest Blog!</span></strong></span></p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-f27634ea03" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-1 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 100px; height: auto;"><img src="https://cdn.dragdropr.com/b59d485c-e8b3-4b3a-b456-eee0237a6af2/" style="height: auto; width: 100px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-3c93d03dc9" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-2 " data-ddr-page-widget-additional-css-id="778296f7df">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-18102" class="ddr-widget__rich-text" style="margin: 0px 30px 3px;">
-                                        <p style="text-align: center;"><span style="color: #797979;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Loremsum has been the</span></p>
-                                        <p style="text-align: center;"><span style="color: #797979;">industry's standard dummy text ever since the lorem.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-2 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-cc3ee3e12d" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 50px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="ddr-84ab4e2fe4" class="ddr-page-section-wrapper ddr-page-section-wrapper-19">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-19" style="max-width: 1200px; margin: auto;">
-                <div class="ddr-page-section ddr-page-section-19">
-                    <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 33.3333%;">
-                            <div id="ddr-be810300b1" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="margin-left: 30px;"><img src="https://cdn.dragdropr.com/3cc1d165-390f-4a2b-9fbe-76f78aa854f0/" style="height: auto; width: 100%;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-056e2cd309" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 " data-ddr-page-widget-additional-css-id="96c3bc46d7">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-19001" class="ddr-widget__rich-text" style="margin: 0px 0px 30px 30px; border-style: solid; border-width: 1px; border-color: rgb(201, 201, 201); padding: 10px 10px 30px 20px;">
-                                        <p style="text-align: left;"><span style="font-size: 22px;"><strong>Budget - Friendly Design Ideas To Transform</strong></span></p>
-                                        <p style="text-align: left;"><span style="font-size: 16px;">Sept 21, 2019&nbsp; &nbsp; &nbsp;24 Comments</span></p>
-                                        <p style="text-align: left;"><span style="color: #797979;">It is a long established fact that a reader will be distracted by the readable content of a page an at its layout. The point of using Lorem Ipsum is that it has a more-or-less.</span></p>
-                                        <p style="text-align: left;"><span style="color: #9868df; font-size: 20px;">Read More &gt;</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 33.3333%;">
-                            <div id="ddr-373029c243" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="margin-left: 30px;"><img src="https://cdn.dragdropr.com/3eac26d1-97f5-421b-a738-a7e53a0a22dd/" style="height: auto; width: 100%;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-31fff0b710" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 " data-ddr-page-widget-additional-css-id="96c3bc46d7">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-19011" class="ddr-widget__rich-text" style="margin: 0px 0px 30px 30px; border-style: solid; border-width: 1px; border-color: rgb(201, 201, 201); padding: 10px 10px 30px 20px;">
-                                        <p style="text-align: left;"><span style="font-size: 22px;"><strong>Budget - Friendly Design Ideas To Transform</strong></span></p>
-                                        <p style="text-align: left;"><span style="font-size: 16px;">Sept 21, 2019&nbsp; &nbsp; &nbsp;24 Comments</span></p>
-                                        <p style="text-align: left;"><span style="color: #797979;">It is a long established fact that a reader will be distracted by the readable content of a page an at its layout. The point of using Lorem Ipsum is that it has a more-or-less.</span></p>
-                                        <p style="text-align: left;"><span style="color: #9868df; font-size: 20px;">Read More &gt;</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-2 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 33.3333%;">
-                            <div id="ddr-158391961d" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="margin-left: 30px;"><img src="https://cdn.dragdropr.com/36322410-11b9-483c-b50e-6371ec9044ee/" style="height: auto; width: 100%;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="ddr-e595dd77e5" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 " data-ddr-page-widget-additional-css-id="96c3bc46d7">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-19021" class="ddr-widget__rich-text" style="margin: 0px 0px 30px 30px; border-style: solid; border-width: 1px; border-color: rgb(201, 201, 201); padding: 10px 10px 30px 20px;">
-                                        <p style="text-align: left;"><span style="font-size: 22px;"><strong>Budget - Friendly Design Ideas To Transform</strong></span></p>
-                                        <p style="text-align: left;"><span style="font-size: 16px;">Sept 21, 2019&nbsp; &nbsp; &nbsp;24 Comments</span></p>
-                                        <p style="text-align: left;"><span style="color: #797979;">It is a long established fact that a reader will be distracted by the readable content of a page an at its layout. The point of using Lorem Ipsum is that it has a more-or-less.</span></p>
-                                        <p style="text-align: left;"><span style="color: #9868df; font-size: 20px;">Read More &gt;</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-cdf24e08b1" class="ddr-page-widget ddr-page-widget__button ddr-page-widget-0 " data-ddr-page-widget-additional-css-id="158aebaa35">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__button" style="justify-content: center;"><a target="_self" style="margin: 10px 30px 30px; border-radius: 100px;">
-                                            <div id="button-19100" style="padding: 15px 30px; font-size: 18px;">View More</div>
-                                        </a></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-2 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-35a55a131b" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 70px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="ddr-c44ae02027" class="ddr-page-section-wrapper ddr-page-section-wrapper-20" style="background-color: rgb(249, 249, 249);">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-20" style="max-width: 1200px; margin: auto;">
-                <div class="ddr-page-section ddr-page-section-20">
-                    <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-a9f579afd1" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 50px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 20%;">
-                            <div id="ddr-b4add76e45" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 120px; height: auto; margin-top: 30px; margin-bottom: 30px;"><img src="https://cdn.dragdropr.com/72766824-7bde-4259-ba38-9e355c9e4fe5/" style="height: auto; width: 120px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 20%;">
-                            <div id="ddr-a4a6956b39" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 120px; height: auto; margin-top: 30px; margin-bottom: 30px;"><img src="https://cdn.dragdropr.com/920fe39f-3513-4547-bf5a-0a2681d9473f/" style="height: auto; width: 120px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-2 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 20%;">
-                            <div id="ddr-4da6ff70a9" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 120px; height: auto; margin-top: 30px; margin-bottom: 30px;"><img src="https://cdn.dragdropr.com/6c75e6df-141e-4b37-8bc3-7698ce2f92ab/" style="height: auto; width: 120px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-3 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 20%;">
-                            <div id="ddr-0cec6cf1d4" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 120px; height: auto; margin-top: 30px; margin-bottom: 30px;"><img src="https://cdn.dragdropr.com/b285048c-be06-47a8-81bb-1832b4d6e111/" style="height: auto; width: 120px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-4 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 20%;">
-                            <div id="ddr-81be09497a" class="ddr-page-widget ddr-page-widget__image ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__image" style="justify-content: center;"><a target="_self" style="width: 120px; height: auto; margin-top: 30px; margin-bottom: 30px;"><img src="https://cdn.dragdropr.com/28b9de9e-8c9f-4b62-a8a3-369887dde1a2/" style="height: auto; width: 120px;"></a>
-                                        <div class="ddr-hot-spots__items-wrapper"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-2 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-39ad8477af" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 50px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="ddr-70f3b0835a" class="ddr-page-section-wrapper ddr-page-section-wrapper-21">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-21" style="max-width: 1200px; margin: auto;">
-                <div class="ddr-page-section ddr-page-section-21">
-                    <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-1cc9a057ea" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 5.95238%;">
-                            <div id="ddr-7d9fd823f2" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 22.619%;">
-                            <div id="ddr-2a903d385d" class="ddr-page-widget ddr-page-widget__icon ddr-page-widget-0 ">
-                                <div class="ddr-widget" style="background-color: rgb(249, 249, 249);">
-                                    <div class="ddr-widget__icon" style="justify-content: center;"><a target="_self" style="margin: 30px 30px 1px;"><i class="fa fa-address-book-o" style="font-size: 20px; color: rgb(152, 104, 223); font-family: FontAwesome;"></i></a></div>
-                                </div>
-                            </div>
-                            <div id="ddr-7780927307" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 " data-ddr-page-widget-additional-css-id="8744febe29">
-                                <div class="ddr-widget" style="background-color: rgb(249, 249, 249);">
-                                    <div id="ddr-rich-text-21111" class="ddr-widget__rich-text" style="margin: 1px 30px 30px;">
-                                        <p style="text-align: center;"><span style="color: #333333;">Address</span></p>
-                                        <p style="text-align: center;"><span style="color: #9868df;">121 King Street, Melbourne, Australia</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-2 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 5.95238%;">
-                            <div id="ddr-1a304107b5" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-3 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 30.9524%;">
-                            <div id="ddr-36d0e47a13" class="ddr-page-widget ddr-page-widget__icon ddr-page-widget-0 ">
-                                <div class="ddr-widget" style="background-color: rgb(249, 249, 249);">
-                                    <div class="ddr-widget__icon" style="justify-content: center;"><a target="_self" style="margin: 30px 30px 1px;"><i class="fa fa-envelope-o" style="font-size: 20px; color: rgb(152, 104, 223); font-family: FontAwesome;"></i></a></div>
-                                </div>
-                            </div>
-                            <div id="ddr-ef68981a86" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 " data-ddr-page-widget-additional-css-id="cb799f52af">
-                                <div class="ddr-widget" style="background-color: rgb(249, 249, 249);">
-                                    <div id="ddr-rich-text-21131" class="ddr-widget__rich-text" style="margin: 1px 30px 30px; border-style: solid; border-width: 0px;">
-                                        <p style="text-align: center;">Email</p>
-                                        <p style="text-align: center;"><span style="color: #9868df;"><a href="mailto:landingpage@example.com">landingpage@example.com landingpage@support.com</a></span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-4 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 5.95238%;">
-                            <div id="ddr-c4f5a9e724" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-5 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 22.619%;">
-                            <div id="ddr-c3c2bff46a" class="ddr-page-widget ddr-page-widget__icon ddr-page-widget-0 ">
-                                <div class="ddr-widget" style="background-color: rgb(249, 249, 249);">
-                                    <div class="ddr-widget__icon" style="justify-content: center;"><a target="_self" style="margin: 30px 30px 1px;"><i class="fa fa-headphones" style="font-size: 20px; color: rgb(152, 104, 223); font-family: FontAwesome;"></i></a></div>
-                                </div>
-                            </div>
-                            <div id="ddr-649113de9e" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-1 " data-ddr-page-widget-additional-css-id="bd316dbf4f">
-                                <div class="ddr-widget" style="background-color: rgb(249, 249, 249);">
-                                    <div id="ddr-rich-text-21151" class="ddr-widget__rich-text" style="margin: 1px 30px 30px;">
-                                        <p style="text-align: center;">Phone</p>
-                                        <p style="text-align: center;"><span style="color: #9868df;">+91 28246 66000 +912824666000</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-6 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 ddr-page-column__hide--320" style="width: 5.95238%;">
-                            <div id="ddr-9593bc6e87" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ddr-page-widget__hide--320">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-2 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-91d8da7f2b" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 50px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="ddr-d807181779" class="ddr-page-section-wrapper ddr-page-section-wrapper-22">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-22">
-                <div class="ddr-page-section ddr-page-section-22">
-                    <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-ecf15adf05" class="ddr-page-widget ddr-page-widget__html ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__html"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2659.2058532340334!2d13.483183950930817!3d48.20265075450386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477415bd69eb4f5f%3A0xc95f2d95ccf9f159!2sDragDropr!5e0!3m2!1sen!2sin!4v1568812038727!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="ddr-02fcfee5b0" class="ddr-page-section-wrapper ddr-page-section-wrapper-23" style="background-color: rgb(17, 17, 17);">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-23" style="max-width: 1200px; margin: auto;">
-                <div class="ddr-page-section ddr-page-section-23">
-                    <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-8453ecc4a6" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-1 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-730c7ca94e" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 " data-ddr-page-widget-additional-css-id="20aa21f40f">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-23100" class="ddr-widget__rich-text" style="margin: 0px 30px;">
-                                        <h1 class="ddr-widget__headline" style="text-align: center;"><span style="color: #ffffff;">Portfolio</span></h1>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-2 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 9.09091%;">
-                            <div id="ddr-74f37d5bec" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-1 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 9.09091%;">
-                            <div id="ddr-5775ff7786" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-2 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 9.09091%;">
-                            <div id="ddr-d748d77527" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-3 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 9.09091%;">
-                            <div id="ddr-37fa588806" class="ddr-page-widget ddr-page-widget__icon ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__icon" style="justify-content: center;"><a target="_self" style="margin: 30px;"><i class="fa fa-facebook-square" style="font-size: 40px; color: rgb(255, 255, 255); font-family: FontAwesome;"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-4 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 9.09091%;">
-                            <div id="ddr-84e8dd90ae" class="ddr-page-widget ddr-page-widget__icon ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__icon" style="justify-content: center;"><a target="_self" style="margin: 30px;"><i class="fa fa-twitter-square" style="font-size: 40px; color: rgb(255, 255, 255); font-family: FontAwesome;"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-5 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 9.09091%;">
-                            <div id="ddr-889472bd34" class="ddr-page-widget ddr-page-widget__icon ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__icon" style="justify-content: center;"><a target="_self" style="margin: 30px;"><i class="fa fa-linkedin-square" style="font-size: 40px; color: rgb(255, 255, 255); font-family: FontAwesome;"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-6 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 9.09091%;">
-                            <div id="ddr-cbe86e5d63" class="ddr-page-widget ddr-page-widget__icon ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__icon" style="justify-content: center;"><a target="_self" style="margin: 30px;"><i class="fa fa-google-plus-square" style="font-size: 40px; color: rgb(255, 255, 255); font-family: FontAwesome;"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-7 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 9.09091%;">
-                            <div id="ddr-7e8012981b" class="ddr-page-widget ddr-page-widget__icon ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__icon" style="justify-content: center;"><a target="_self" style="margin: 30px;"><i class="fa fa-instagram" style="font-size: 40px; color: rgb(255, 255, 255); font-family: FontAwesome;"></i></a></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-8 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 9.09091%;">
-                            <div id="ddr-cd59fc4bb2" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-9 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 9.09091%;">
-                            <div id="ddr-85be55835b" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="ddr-page-column ddr-page-column-10 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 9.09091%;">
-                            <div id="ddr-48d62e6664" class="ddr-page-widget ddr-page-widget__spacer ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div class="ddr-widget__spacer" style="height: 100px;"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ddr-page-row ddr-page-row-3 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-8b2b2a11a4" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 " data-ddr-page-widget-additional-css-id="c74b1c8dd9">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-23300" class="ddr-widget__rich-text" style="margin: 30px;">
-                                        <p style="text-align: center;"><span style="color: #ffffff;">©2019 Landing Page. All Right Reserved. Designed</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="ddr-6c260a5471" class="ddr-page-section-wrapper ddr-page-section-wrapper-24">
-            <div class="ddr-page-section-pre-content ddr-page-section-pre-content-24" style="max-width: 1200px; margin: auto;">
-                <div class="ddr-page-section ddr-page-section-24">
-                    <div class="ddr-page-row ddr-page-row-0 ddr-page-row__wrap--320 ddr-page-row__wrap--480 ddr-page-row__wrap--768">
-                        <div class="ddr-page-column ddr-page-column-0 ddr-page-column__wrap--320 ddr-page-column__wrap--480 ddr-page-column__wrap--768 " style="width: 100%;">
-                            <div id="ddr-62f3834a17" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 ">
-                                <div class="ddr-widget">
-                                    <div id="ddr-rich-text-24000" class="ddr-widget__rich-text" style="margin: 30px;">
-                                        <p style="text-align: center;"><strong><span style="font-size: 36px;">Free Images Resouces</span></strong></p>
-                                        <p style="text-align: center;"></p>
-                                        <p style="text-align: center;"><a href="https://pixabay.com/">https://pixabay.com/</a></p>
-                                        <p style="text-align: center;"><a href="https://www.pexels.com/">https://www.pexels.com/</a></p>
-                                        <p style="text-align: center;"><a href="https://www.shutterstock.com/">https://www.shutterstock.com/</a></p>
-                                        <p style="text-align: center;"><a href="https://unsplash.com/">https://unsplash.com/</a></p>
-                                        <p style="text-align: center;"><a href="https://freellustrations.com/">https://freellustrations.com/</a></p>
-                                        <p style="text-align: center;"><a href="http://tiny.cc/pcfsdz">http://tiny.cc/pcfsdz</a></p>
-                                        <p style="text-align: center;"><a href="http://tiny.cc/idfsdz">http://tiny.cc/idfsdz</a></p>
+                            <div id="ddr-03b48d2474" class="ddr-page-widget ddr-page-widget__rich-text ddr-page-widget-0 ">
+                                <div class="ddr-widget" style="background-color: rgb(214, 210, 226);">
+                                    <div id="ddr-rich-text-4000" class="ddr-widget__rich-text" style="margin: 30px; border-style: solid; border-width: 0px; border-color: rgb(255, 255, 255);">
+                                        <table class="table_black">
+                                            <thead>
+                                                <tr>
+                                                    <th><span style="color: #333399;">Specifications</span></th>
+                                                    <th><span style="color: #000080;">Redmi Note 8 Pro</span></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Display Type</strong></td>
+                                                    <td>6.53-inch IPS LCD display, 19.5:9 aspect ratio, 2340×1080 resolution, 60Hz refresh rate</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Size</strong></td>
+                                                    <td>161.4 x 76.4 x 8.8 mm, 200g</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>System-on-chip</strong></td>
+                                                    <td>MediaTek Helio G90T, 12nm process, octa-core setup (2 x 2.05GHz Cortex-A76, 6 x 2.0GHz Cortex-A55)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>RAM Capacity</strong></td>
+                                                    <td>6GB (LPDDR4X)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Storage Capacity</strong></td>
+                                                    <td>64GB/128GB, UFS 2.1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Headphone Jack</strong></td>
+                                                    <td>Yes</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Front Camera</strong></td>
+                                                    <td>20MP, f/2.0, 0.9µm w/&nbsp;1080p@30fps&nbsp;video recording</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Rear Cameras</strong></td>
+                                                    <td><strong>Quad Camera Setup</strong>
+                                                        <p></p>
+                                                        <ul>
+                                                            <li>64MP main sensor, f/1.9, 0.8µm w/ PDAF,&nbsp;2160p@30fps&nbsp;video recording,&nbsp;720p@960fps&nbsp;slow-mo video recording</li>
+                                                            <li>8MP ultra-wide-angle sensor, 120° field-of-view, f/2.2, 1.12µm w/&nbsp;1080p@30fps&nbsp;video recording</li>
+                                                            <li>2MP depth sensor, f/2.4, 1.75µm</li>
+                                                            <li>2MP dedicated macro sensor, f/2.4, 1.75µm</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Battery Capacity</strong></td>
+                                                    <td>4,500 mAh</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Fast Charging</strong></td>
+                                                    <td>
+                                                        <ul>
+                                                            <li>Yes, support for 27W fast charging</li>
+                                                            <li>18W charger included in box</li>
+                                                        </ul>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Biometrics</strong></td>
+                                                    <td>Rear-mounted fingerprint scanner, AI-based face unlock</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Software</strong></td>
+                                                    <td>MIUI 10 based on Android Pie</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Colors</strong></td>
+                                                    <td>Mineral Gray, Forest Green, Pearl White</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Pricing</strong></td>
+                                                    <td>blank</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Availability</strong></td>
+                                                    <td>Available now!</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
@@ -2706,6 +616,84 @@
         </div>
     </div>
 </div>
-</div>
+<script>
+    <!--
+
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        init();
+    } else {
+        document.addEventListener('DOMContentLoaded', init);
+    }
+
+    function init() {
+        (function() {
+            var callbackFunction = function() {
+                if (window.DragDropr && window.DragDropr.dependencyManager && window.DragDropr.dependencyManager.loaded()) {
+                    var dependencies = "https://code.jquery.com/jquery-3.3.1.min.js,https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js,https://app.dragdropr.com/ddr-scripts/slick-extended.js?version=1.0.8".split(','),
+                        styleDependencies = "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css,https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css".split(',');
+                    window.DragDropr.dependencyManager.requireStyles(styleDependencies, function() {
+                        window.DragDropr.dependencyManager.require(dependencies, function() {
+                            DragDropr.dependencyManager.window.$("#ddr-f3eac7f5ec .ddr-widget__slideshow", window.document).slick({
+                                "focusOnSelect": true,
+                                "swipeToSlide": true,
+                                "arrows": true,
+                                "dots": true,
+                                "autoplay": true,
+                                "autoplaySpeed": 3000,
+                                "cssEase": "ease",
+                                "fade": false,
+                                "speed": "1000",
+                                "prevArrow": "<i class='slideshow-arrow slideshow-arrow-left fa fa-chevron-left' style='font-family: FontAwesome;' />",
+                                "nextArrow": "<i class='slideshow-arrow slideshow-arrow-right fa fa-chevron-right' style='font-family: FontAwesome;' />",
+                                "customPaging": function(slider, i) {
+                                    return '<i class="slideshow-dot fa fa-circle" />';
+                                },
+                                "slidesToShow": 1,
+                                "centerMode": false,
+                                "responsive": [{
+                                    "breakpoint": 1281,
+                                    "settings": {
+                                        "slidesToShow": 1,
+                                        "centerMode": false
+                                    }
+                                }, {
+                                    "breakpoint": 1025,
+                                    "settings": {
+                                        "slidesToShow": 1,
+                                        "centerMode": false
+                                    }
+                                }, {
+                                    "breakpoint": 769,
+                                    "settings": {
+                                        "slidesToShow": 1,
+                                        "centerMode": false
+                                    }
+                                }, {
+                                    "breakpoint": 481,
+                                    "settings": {
+                                        "slidesToShow": 1,
+                                        "centerMode": false
+                                    }
+                                }, {
+                                    "breakpoint": 321,
+                                    "settings": {
+                                        "slidesToShow": 1,
+                                        "centerMode": false
+                                    }
+                                }],
+                            });
+                        });
+                    });
+                    document.removeEventListener('DragDropr.DependencyManager', callbackFunction);
+                }
+            };
+            document.addEventListener('DragDropr.DependencyManager', callbackFunction);
+            callbackFunction();
+        })();
+
+    }
+
+    //-->
+</script>
 </body>
 </html>
